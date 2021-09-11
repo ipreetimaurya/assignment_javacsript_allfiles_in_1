@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>simple two's numbers calculation</title>
+</head>
+
+
+<body>
+<h2>simple binary operator calculation</h2>
+<form action="#">
+<input class="num1" type="text" placeholder="Number1" /><br/><br/>
+
+<input class="num2" type="text" placeholder="Number2"/><br/><br/>
+
+<select class="operator">
+<option value="+">Addition</option>
+<option value="-">Subraction</option>
+<option value="*">Multiply</option>
+<option value="/">Divide</option>
+</select>
+
+<button class="submit">submit</button>
+
+</form>
+<p class="demo"></p>
+
+<script>
+
+
+var submit = document.querySelector(".submit");
+submit.addEventListener("click", function(e){
+e.preventDefault(); 
+                                    
+var num1 = parseInt(document.querySelector(".num1").value);
+var num2 = parseInt(document.querySelector(".num2").value);
+var operator = document.querySelector(".operator").value;
+
+
+if(operator === "-" )
+{  
+var demo= document.querySelector(".demo").innerHTML = num1 - num2 ; 
+num1.value=""; 
+num2.value="";
+}
+if(operator === "+" )
+{  
+var demo= document.querySelector(".demo").innerHTML = num1 + num2 ; 
+
+}
+if(operator === "*" )
+{  
+var demo= document.querySelector(".demo").innerHTML = num1 * num2 ; 
+
+}
+if(operator === "/" )
+{  
+var demo= document.querySelector(".demo").innerHTML = num1 / num2 ; 
+
+}
+
+})
+
+
+</script>
+</body>
+
+</html>

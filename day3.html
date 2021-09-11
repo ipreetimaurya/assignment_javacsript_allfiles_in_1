@@ -1,0 +1,26 @@
+<html>
+<head><title>Day3_1questions</title></head>
+
+<body>
+<h2>Day3_1questions</h2>
+<form action="#">
+<input class="num1" type="text" placeholder="Add Text" /><br/><br/>
+<button class="submit">Submit</button>
+</form>
+<p class="demo"></p>
+
+
+<script>
+
+var submit = document.querySelector(".submit");
+submit.addEventListener("click", function(e){
+e.preventDefault(); 
+                               
+var num1 = document.querySelector(".num1");
+
+var demo = document.querySelector(".demo").innerHTML += num1.value + "<br/>";  
+num1.value=""; 
+})
+</script>
+</body>
+</html>
